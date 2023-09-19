@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
+    marginBottom: 30
   },
   img: {
     width: 18,
@@ -27,8 +28,8 @@ const styles = StyleSheet.create({
     color: '#4F63AC',
     textAlign: 'center',
     fontSize: 26,
-    fontWeight: "500",
+    fontWeight: '500',
     paddingHorizontal: 16,
   },
 });
-export default AuthHeader;
+export default React.memo(AuthHeader);

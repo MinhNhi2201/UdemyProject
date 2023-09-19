@@ -1,9 +1,10 @@
 import React from 'react';
 import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
 import Button from '../../../component/button';
+import SignUp from '../SignUp';
+import SignIn from '../SignIn';
 
-
-const SplashScreen = () => {
+const SplashScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <Image
@@ -16,11 +17,10 @@ const SplashScreen = () => {
         <Text style={[styles.innerTitle, styles.title]}>All you need</Text>
         <Text style={styles.title}> You'll Find Here</Text>
       </View>
-      <Button title="Sign in" onPress={() => console.log('Clicked')} />
-      <Pressable hitSlop={20}>
+      <Button title="Sign in" onPress={() => navigation.navigate('SignIn')} />
+      <Pressable hitSlop={20} onPress={() => navigation.navigate('SignUp')}>
         <Text style={styles.footerText}>Sign up</Text>
       </Pressable>
-
     </View>
   );
 };
@@ -56,4 +56,4 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
 });
-export default SplashScreen;
+export default React.memo(SplashScreen);

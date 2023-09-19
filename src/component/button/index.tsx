@@ -1,9 +1,9 @@
 import React from 'react';
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 
-const Button = ({title, onPress}) => {
+const Button = ({title, onPress, style}) => {
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
+    <TouchableOpacity style={[styles.container, style]} onPress={onPress}>
       <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
   );
@@ -23,4 +23,4 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
-export default Button;
+export default React.memo(Button);
