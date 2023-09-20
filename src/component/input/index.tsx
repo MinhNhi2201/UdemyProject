@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
   },
   input: {
     paddingHorizontal: 16,
-    paddingVertical: 20,
+    paddingVertical: 14,
     flex: 1,
   },
   eye: {

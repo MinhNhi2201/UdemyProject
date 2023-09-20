@@ -3,8 +3,11 @@ import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
 import Button from '../../../component/button';
 import SignUp from '../SignUp';
 import SignIn from '../SignIn';
+import {UserContext} from '../../../../App';
 
 const SplashScreen = ({navigation}) => {
+
+
   return (
     <View style={styles.container}>
       <Image
